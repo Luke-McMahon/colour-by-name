@@ -2,9 +2,36 @@
 
 import { useEffect, useState } from 'react';
 
+function Footer() {
+  return (
+    <footer
+      className='
+    absolute bottom-0 w-full flex justify-center items-center h-12 text-white'
+    >
+      <p className='text-center'>
+        Made with{' '}
+        <span
+          role='img'
+          aria-label='love'
+        >
+          ❤️
+        </span>{' '}
+        by{' '}
+        <a
+          className='underline'
+          href='https://github.com/luke-mcmahon'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Luke McMahon
+        </a>
+      </p>
+    </footer>
+  );
+}
 export default function Home() {
   const [backgroundColour, setBackgroundColour] =
-    useState('rgb(255, 255, 255)');
+    useState('rgb(100, 150, 200)');
 
   const [name, setName] = useState('');
 
@@ -42,20 +69,14 @@ export default function Home() {
       }}
       className='flex min-h-screen flex-col items-center justify-center p-24'
     >
-      {/* <label className='text-2xl font-bold'>Colour your name</label> */}
       <input
-        className='w-64 p-2 m-2  border-b-2 border-white bg-transparent'
+        className='w-64 p-2 m-2 border-b-2 border-white bg-transparent'
         type='text'
         placeholder='Enter your name'
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      {/* <button
-          className='w-64 p-2 m-2 text-center border-2 border-white rounded-md bg-transparent'
-          onClick={generateColour}
-        >
-          Colour!
-        </button> */}
+      <Footer />
     </main>
   );
 }
