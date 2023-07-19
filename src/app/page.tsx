@@ -70,7 +70,7 @@ export default function Home() {
       className='flex min-h-screen flex-col items-center justify-center p-24'
     >
       <input
-        className='w-64 p-2 m-2 border-b-2 border-white bg-transparent'
+        className='w-64 p-2 m-2 border-b-2 border-white bg-transparent placeholder-slate-100'
         type='text'
         placeholder='Enter your name'
         value={name}
